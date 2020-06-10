@@ -5,7 +5,7 @@ function sleep(ms) {
 
 async function main() {
   while(true) {
-    console.log('Containers rule!');
+    console.log(`My favourite food is: ${process.env.FAV_FOOD}`);
     await sleep(5000);
   }
 }
