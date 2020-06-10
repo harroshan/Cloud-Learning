@@ -12,8 +12,7 @@ before_script:
 script:
         - cd ./simple-node/
         - docker --version # print the version for logging
-        - docker build -t simple-node .
-        - docker tag simple-node harroshan/slow-node-base:latest
+        - docker build -t harroshan/simple-node .
 after_success:
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-        - docker push harroshan/slow-node-base
+        - docker push harroshan/simple-node
